@@ -16,7 +16,9 @@ const cmds: Record<string, string> = {
     '[!] Other skills [!]<br>': '#ec03fc',
     '~ C/C++<br>~ Git<br>~ LaTeX<br><br>': '#fff',
     '[!] Useful links [!]<br>': '#ec03fc',
-    '~ <a href=\'mailto:elena.ferro@gmail.com\'>Email</a><br>~ <a href=\'https://github.com/elenaferr0/\' target=\'blank\'>GitHub</a><br><br><br>': '#fff',
+    '~ <a href=\'mailto:elena.ferro@gmail.com\' target=\'blank\'>Email</a><br>~ <a href=\'https://github.com/elenaferr0/\' target=\'blank\'>GitHub</a><br><br><br>': '#fff',
+    ' exit<br>': '#fff',
+    'debian-vm Login:': '#42f557'
 }
 
 const createCommand = (i: number) => {
@@ -47,7 +49,11 @@ const HomePage: React.FC = () => {
                         .typeString(createCommand(12))
                         .typeString(createCommand(13))
                         .typeString(createCommand(14))
+                        .typeString(prompt())
                         .typeString(createCommand(15))
+                        .typeString(createCommand(16))
+                        .typeString(createCommand(17))
+
                         .pauseFor(2000)
                         .start();
                 }}
